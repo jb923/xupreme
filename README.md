@@ -15,21 +15,21 @@ Note: The demo user profile is designed to be static and with reset to it's defa
 *Xupreme can be found at [https://xupreme.herokuapp.com/](https://xupreme.herokuapp.com/).*
 
 ## Technologies Used
-Created with 
+Created with
 
     - React
 
     - Material UI
 
-    - Postgres 
+    - Postgres
 
     - Node.js
 
     - BcryptJS
 
     - Python/Flask
-    
-    -SQL
+
+    - SQL
 
 
 ## MVP Features
@@ -52,7 +52,7 @@ Overall, Xupreme was fun to make and I genuinely cared about this project. I alw
 
 
 
-## Created By 
+## Created By
 - [Johnny Bui](https://github.com/JBui923)
 
 [![forthebadge](https://forthebadge.com/images/badges/made-with-javascript.svg)](https://forthebadge.com)
