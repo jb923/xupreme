@@ -1,0 +1,28 @@
+.featured__carousel {
+    width: 1000px;
+    height: 400px;
+    margin: 75px auto 80px auto;
+    z-index: 0;
+    background-color: #ffffff;
+    padding: 8px;
+}
+
+.carousel__list{
+    width: 100%;
+    height: 100%;
+}
+
+.carousel__item--img {
+    width: 100%; 
+    height: 100%;
+    overflow: hidden;
+    transition: transform 2s;
+    transition-timing-function: ease-out;
+    filter: brightness(100%);
+}
+
+
+.carousel__item--img:hover {
+    transform: scale(1.05);
+    /* filter: brightness(100%) contrast(100%); */
+}

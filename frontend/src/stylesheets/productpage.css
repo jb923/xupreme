@@ -1,0 +1,116 @@
+.products__main-container {
+    display: flex;
+    flex-direction: row;
+    background-color: white;
+    height: 500px;
+    width: 900px;
+    /* width: 1000px;
+    height: 625px; */
+    padding: 12px;
+    margin-top: 12px;
+    margin-bottom: 24px;
+}
+
+.products__img img {
+    height: 450px;
+    width: 450px;
+    padding: 8px;
+    margin: 4px 8px;
+ 
+}
+
+.products__container-inner {
+    display: inline-block;
+    text-align: left;
+    padding: 8px;
+}
+
+.products__name {
+    padding: 4px;
+    font-size: 16px;
+    margin-top: 12px;
+}
+
+.products__color {
+    padding: 4px;
+    font-size: 14px;
+    font-weight: 600;
+    margin-top: -6px;
+}
+
+.products__details {
+    font-size: 14px;
+    padding: 4px;
+    margin: 12px auto;
+}
+
+.products__price {
+    font-size: 18px;
+    padding: 4px;
+
+}
+
+.products__cart-container {
+    padding: 4px;
+    margin: 24px auto;
+}
+
+.products__buttons {
+    display: flex;
+    flex-direction: row;
+    padding: 4px;
+    margin: 12px auto;
+    /* justify-content: space-evenly; */
+}
+
+.products__cart {
+    height: 24px;
+    width: 100px;
+    background-color: #FF0000;
+    color: #ffffff;
+    font-family: 'Courier New', Courier, monospace;
+    border: 1px solid #FF0000;
+    display: block;
+    text-align: center;
+    white-space: nowrap;
+    font-weight: bold;
+    padding: .27273em 0;
+    font-size: 12px;
+}
+
+.products__cart:hover {
+    background-color: #000000;
+    
+}
+
+.products__cart:active {
+    background-color: #FF0000;
+
+}
+
+.products__shopping {
+    height: 24px;
+    width: 100px;
+    background-color: #40393a;
+    color: #ffffff;
+    font-family: 'Courier New', Courier, monospace;
+    border: 1px solid #40393a;
+    display: block;
+    text-align: center;
+    white-space: nowrap;
+    font-weight: bold;
+    padding: .27273em 0;
+    font-size: 12px;
+    margin-right: 12px;
+}
+
+.products__shopping:hover {
+    background-color: #000000;
+}
+
+
+/* .products__review-header {
+    background-color: #ffffff;
+    margin-bottom: 24px;
+    padding: 16px;
+} */
