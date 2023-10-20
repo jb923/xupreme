@@ -33,7 +33,7 @@ Created with
 
 
 ## MVP Features
-- A responsive carousel that exhibits features items in the shop page.
+- A responsive carousel that exhibits featured items on the  webpage.
 - An extensive Python backend with SQL seeding that renders over 120 products on the site.
 - A login feature that uses BCrypt password hashing backend and Auth Routes in the frontend to prevent plain text password storage and ensure user privacy by restricting access to user specific site features.
 - Users can view the product page, and add the item to the cart for checkout
@@ -47,7 +47,7 @@ Created with
 <img src='xupreme-schema.png'>
 
 ## Conclusion
-Overall, Xupreme was fun to make and I genuinely cared about this project. I always had a passion in technology and fashion. To put the two together into one project kept me focused and determined to make it as authentic as possible. Some challenges were the use of sizes for some of the products was a little tricky and required some data manipulation. It was a challange at first but I was able to get it down. It helped me understand the flow of data a little better throughout my project. Of course there are always more elements that can be added to any project but for this project I believe this is a great starting off point.
+Overall, Xupreme was fun to make and I genuinely cared about this project. I always had a passion in technology and fashion. To put the two together into one project kept me focused and determined to make it as authentic as possible. Some challenges were the use of sizes for some of the products was a little tricky and required some data manipulation. It was a challenge at first but I was able to get it down. It helped me understand the flow of data a little better throughout my project. Of course there are always more elements that can be added to any project but for this project I believe this is a great starting off point.
 
 
 
