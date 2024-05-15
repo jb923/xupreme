@@ -1,6 +1,6 @@
 import React, {useEffect} from 'react';
 import { connect } from "react-redux";
-import { Redirect} from 'react-router-dom';
+// import { Redirect} from 'react-router-dom';
 import { fetchTransaction } from "../actions/transactionActions";
 import { GrLogout } from "react-icons/gr"
 import { logout } from "../actions/sessionActions";

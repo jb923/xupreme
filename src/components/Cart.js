@@ -1,10 +1,10 @@
-import React, { useState} from "react";
+import React, { useState, useEffect } from "react";
 import { connect } from "react-redux";
 import Header from "./Header";
 import NavLower from "./NavLower";
 
 
-import { removeFromCart } from "../actions/cartActions";
+import { removeFromCart, fetchCartItems, fetchProducts } from "../actions/cartActions";
 
 
 
@@ -13,15 +13,21 @@ const Cart = (props) => {
 
     // const userId = props.sessionId;
     const cartItemsArray = props.cartItemsArray;
-    const [cartArray, setCartArray] = useState(cartItemsArray); 
+    const [cartArray, setCartArray] = useState(cartItemsArray);
+
+    useEffect(() => {
+        props.fetchCartItems();
+        props.fetchProducts();
+    }, []);
+
     if (props.products.length === 0) return null;
     const targetProducts = cartItemsArray.map(item => {
         let selectedProduct = props.productsObj[item.product]
         selectedProduct.size = item.size
-        return selectedProduct 
+        return selectedProduct
     });
     let total = 0;
-    
+
 
     const handleRemove = event => {
         event.preventDefault();
@@ -71,7 +77,7 @@ const Cart = (props) => {
                         <div className="cart__subtotal--total">subtotal: ${(total / 100)}</div>
                     </div>
                     <div className="cart__button--container">
-                        <button className="cart__shopping--button" onClick={(handleShopping)}>keep shopping</button>  
+                        <button className="cart__shopping--button" onClick={(handleShopping)}>keep shopping</button>
                         <button className="cart__checkout--button" onClick={(handleCheckout)}>checkout now</button>
                     </div>
             </div>
@@ -91,9 +97,9 @@ const mapStateToProps = (state) => {
 const mapDispatchToProps = (dispatch) => {
     return {
         removeFromCart: (id) => dispatch(removeFromCart(id)),
-
+        fetchCartItems: () => dispatch(fetchCartItems()),
+        fetchProducts: () => dispatch(fetchProducts()),
     };
 };
 
 export default connect(mapStateToProps, mapDispatchToProps)(Cart);
-

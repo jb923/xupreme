@@ -20,36 +20,47 @@ export const loadToken = () => (dispatch) => {
 };
 
 export const createUser = (firstName, lastName, email, password) => async dispatch => {
-    const response = await fetch(`${baseUrl}/api/users`, {
-        method: 'POST',
-        headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify({ firstName, lastName, email, password }),
-    });
+    try {
+        const response = await fetch(`${baseUrl}/api/users`, {
+            method: 'POST',
+            headers: { 'Content-Type': 'application/json' },
+            body: JSON.stringify({ firstName, lastName, email, password }),
+        });
 
-    if (response.ok) {
+        if (!response.ok) {
+            throw new Error(`HTTP error! status: ${response.status}`);
+        }
+
         const payload = await response.json();
         window.localStorage.setItem(TOKEN_KEY, payload.access_token);
         window.localStorage.setItem("supreme/authentication/USER_ID", payload.user.id);
         window.localStorage.setItem("supreme/authentication/firstName", payload.user.firstName);
         window.localStorage.setItem("supreme/authentication/lastName", payload.user.lastName);
         dispatch(setToken(payload));
+    } catch (error) {
+        console.error('Failed to create user:', error);
     }
 };
 
 export const login = (email, password) => async dispatch => {
-    const response = await fetch(`${baseUrl}/api/users/session`, {
-        method: 'POST',
-        headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify({ email, password }),
-    });
+    try {
+        const response = await fetch(`${baseUrl}/api/users/session`, {
+            method: 'POST',
+            headers: { 'Content-Type': 'application/json' },
+            body: JSON.stringify({ email, password }),
+        });
 
-    if (response.ok) {
+        if (!response.ok) {
+            throw new Error(`HTTP error! status: ${response.status}`);
+        }
+
         const payload = await response.json();
         window.localStorage.setItem(TOKEN_KEY, payload.access_token);
         window.localStorage.setItem("supreme/authentication/USER_ID", payload.user.id);
         window.localStorage.setItem("supreme/authentication/firstName", payload.user.firstName);
         window.localStorage.setItem("supreme/authentication/lastName", payload.user.lastName);
-        dispatch(setToken({ token: payload.access_token, user: payload.user.id, firstName: payload.user.firstName, lastName: payload.user.lastName }));
+    } catch (error) {
+        console.error('Failed to log in:', error);
     }
 };
 

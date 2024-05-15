@@ -25,7 +25,7 @@ import Checkout from './components/Checkout';
 import Profile from './components/Profile';
 
 
-const App = props => {
+const App = (props) => {
 
   useEffect(() => {
       props.loadToken();
@@ -97,4 +97,3 @@ export default connect(
 )(
   App
 );
-
